@@ -169,7 +169,7 @@ button{
 }
 
 #garbageRequestForm button {
-    background-color: #007bff;
+    background-color: black;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -178,8 +178,39 @@ button{
 }
 
 #garbageRequestForm button:hover {
-    background-color: #0056b3;
+    background-color: plum;
 }
+        #searchAndDelete {
+            display: flex;
+            flex-direction: column;
+            background-color: #f7f7f7;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #searchId {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #searchButton,
+        #deleteButton {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        #searchButton:hover,
+        #deleteButton:hover {
+            background-color: purple;
+        }
+
+    
 
 
 

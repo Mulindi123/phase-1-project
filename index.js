@@ -4,6 +4,7 @@ const sideBar = document.querySelector("#sidebar");
 let isScheduleVisible = false; 
 const scheduleContainer = document.createElement("div")
 
+
 // Function to display garbage collection schedule on the web page
 function showSchedule(){
 fetch(dataUrl)
@@ -97,6 +98,7 @@ function updateSchedule (day,timeSlot, area) {
          .catch(error => console.log(error));
     })
 }
+// add event listeners to the form
 garbageRequestForm.addEventListener("submit", function(event){
     event.preventDefault();
 
@@ -104,6 +106,7 @@ garbageRequestForm.addEventListener("submit", function(event){
     const day = document.getElementById("day").value
     const timeSlot = document.getElementById("timeSlot").value
 
+    // Alert if the day entered is not friday
     if (!isFriday(day)) {
         alert("Sorry, we only offer garbage collection on Fridays.");
         return;
@@ -120,3 +123,34 @@ garbageRequestForm.addEventListener("submit", function(event){
         })
         .catch(error => console.log(error));
 })
+
+// Here I want to implement search and delete
+// Function to search for an entry by Id
+function searchEntry(id) {
+
+    const oneEntryContainer = document.getElementById("content3")
+    fetch(`${dataUrl}/${id}`)
+    .then(res =>res.json())
+    .then(data =>{
+        const entryContainer =document.createElement("div")
+        entryContainer.innerHTML = `
+        <h5>${data.day}</h5>
+        <h6>Area: ${data.area}</h6>
+        <p>Morning: ${data.morning}</p>
+        <p>MidMorning: ${data.midMorning}</p>
+        <p>Afternoon: ${data.afterNoon}</p>`;
+        oneEntryContainer.innerHTML = ""; // Clear previous content
+
+        oneEntryContainer.appendChild(entryContainer);
+    })
+    .catch(error => console.log(error));
+}
+
+let searchButton =document.getElementById("searchButton")
+searchButton.addEventListener("click", function(event){
+    event.preventDefault();
+
+        // Get the value from the search input field with id "searchId"
+    const searchId = document.getElementById("searchId").value
+    searchEntry(searchId);
+});
