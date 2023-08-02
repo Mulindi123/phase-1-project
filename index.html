@@ -18,7 +18,7 @@
         <ul class="menu-list">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#footer">Contact</a></li>
           </ul>
        </nav>
        <main>
@@ -26,6 +26,12 @@
         title="Keep the environment clean" alt="Keep the environment clean">
         <p>We offer waste collection services as well as education on waste management 
             and recycling.</p>
+            <div id="resources">
+                <button id="showResources">Show Resources</button>
+                <div id="resourcesContent" style="display: none;">
+                    <h6>Content for waste management, recycling, and reusing tips</h6>
+                </div>
+            </div>
        </main>
 
        <div id="sidebar">
@@ -34,10 +40,32 @@
 
         </ul>
        </div>
-       <div id="content1">content1</div>
+       <div id="requestForm">
+        <h3>Request Garbage Collection</h3>
+        <form id="garbageRequestForm">
+            <label for="area">Area:</label>
+            <input type="text" id="area" required>
+            <label for="day">Day:</label>
+            <input type="text" id="day" placeholder="Friday" required>
+            <label for="timeSlot">Preferred Time Slot:</label>
+            <select id="timeSlot" required>
+                <option value="morning">Morning</option>
+                <option value="midMorning">Mid-Morning</option>
+                <option value="afternoon">Afternoon</option>
+            </select>
+            <button type="submit">Submit Request</button>
+        </form>
+       </div>
        <div id="content2">content2</div>
        <div id="content3">content3</div>
-       <footer id="footer">Footer</footer>
+       <footer id="footer">
+        <h6>Contact Us</h6>
+        <ul id="contacts">
+            <li><a href="tel:+254753116986">Phone Number</a></li>
+            <li><a href="mailto:medrine.mulindi@student.moringaschool.com">Email</a></li>
+            <li><a href="https://github.com/Mulindi123">GitHub</a></li>
+        </ul>   
+       </footer>
     </div>
     <script src='./index.js'></script> 
 </body>

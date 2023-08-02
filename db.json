@@ -1,37 +1,44 @@
 {
-    "Schedule":[
-        {
-            "day": "Monday",
-            "area":"Uthiru and its environs",
-            "morning": "Copa",
-            "midMorning": "Lexo",
-            "afterNoon": "Eighty_Seven",
-            "id": 1
-        },
-         {
-            "day": "Tuesday",
-            "area":"Kinoo area",
-            "morning": "Kinoo",
-            "midMorning": "Muthiga",
-            "afterNoon": "Ndenderu",
-            "id": 2
-        },
-         {
-            "day": "Wednesday",
-            "area":"Gishagi area",
-            "morning": "Ndumboini",
-            "midMorning": "Gishagi",
-            "afterNoon": "Junction",
-            "id": 3
-        },
-         {
-            "day": "Thursday",
-            "area":"Westlands area",
-            "morning": "Kangemi",
-            "midMorning": "Waruku",
-            "afterNoon": "Westlands",
-            "id": 4
-        }
-        
-    ]
+  "Schedule": [
+    {
+      "day": "Monday",
+      "area": "Uthiru and its environs",
+      "morning": "Copa",
+      "midMorning": "Lexo",
+      "afterNoon": "Eighty_Seven",
+      "id": 1
+    },
+    {
+      "day": "Tuesday",
+      "area": "Kinoo area",
+      "morning": "Kinoo",
+      "midMorning": "Muthiga",
+      "afterNoon": "Ndenderu",
+      "id": 2
+    },
+    {
+      "day": "Wednesday",
+      "area": "Gishagi area",
+      "morning": "Ndumboini",
+      "midMorning": "Gishagi",
+      "afterNoon": "Junction",
+      "id": 3
+    },
+    {
+      "day": "Thursday",
+      "area": "Westlands area",
+      "morning": "Kangemi",
+      "midMorning": "Waruku",
+      "afterNoon": "Westlands",
+      "id": 4
+    },
+    {
+      "day": "friday",
+      "area": "Any Area",
+      "morning": "Gishagi",
+      "midMorning": "free",
+      "afterNoon": "free",
+      "id": 5
+    }
+  ]
 }
