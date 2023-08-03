@@ -62,6 +62,19 @@ showResourcesButton.addEventListener("click", () => {
     }
 });
 
+//Add eventlistener to the like button
+//I have added a like button for interactivity
+const likeButtons = document.querySelectorAll(".like-button");
+likeButtons.forEach(likeButton => {
+    let likeCount = 0;
+    const likeCountElement = likeButton.nextElementSibling;
+    
+    likeButton.addEventListener("click", () => {
+        likeCount++;
+        likeCountElement.textContent = `${likeCount} Like${likeCount === 1 ? '' : 's'}`;
+    });
+});
+
 
 //Form for users to make garbage collection requests
 const garbageRequestForm = document.querySelector("#garbageRequestForm");
