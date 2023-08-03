@@ -31,7 +31,8 @@ function displaySchedule (data) {
  })
  
 }
-// Function to toggle schedule visibility when the "View schedule Button" is clicked
+// Function to toggle schedule visibility 
+//when the "View schedule Button" is clicked
 function viewScheduleOnClick() {
     if(isScheduleVisible){
         scheduleContainer.innerHTML = ''; // Clear the schedule if it is visible
@@ -64,7 +65,8 @@ showResourcesButton.addEventListener("click", () => {
 //Form for users to make garbage collection requests
 const garbageRequestForm = document.querySelector("#garbageRequestForm");
 
-// Function to check if the given day is Friday(I only do special requests on fridays)
+// Function to check if the given day is Friday
+//(I only do special requests on fridays)
 function isFriday(day) {
     return day.toLowerCase() === "friday";
 }
@@ -128,7 +130,7 @@ garbageRequestForm.addEventListener("submit", function(event){
 // Function to search for an entry by Id
 function searchEntry(id) {
 
-    const oneEntryContainer = document.getElementById("content3")
+    const oneEntryContainer = document.getElementById("deletediv")
     fetch(`${dataUrl}/${id}`)
     .then(res =>res.json())
     .then(data =>{
@@ -141,6 +143,15 @@ function searchEntry(id) {
         <p>Afternoon: ${data.afterNoon}</p>`;
         oneEntryContainer.innerHTML = ""; // Clear previous content
 
+        // Create the delete button
+        const deleteButton = document.createElement("button");
+        deleteButton.innerHTML= "Delete";
+    
+        
+        //Add event listener to the delete button,
+        //calling the deleteSheduleEntry function below
+        deleteButton.addEventListener("click",  deleteScheduleEntry);
+        entryContainer.appendChild(deleteButton);
         oneEntryContainer.appendChild(entryContainer);
     })
     .catch(error => console.log(error));
@@ -150,7 +161,23 @@ let searchButton =document.getElementById("searchButton")
 searchButton.addEventListener("click", function(event){
     event.preventDefault();
 
-        // Get the value from the search input field with id "searchId"
+    // Get the value from the search input field with id "searchId"
     const searchId = document.getElementById("searchId").value
     searchEntry(searchId);
 });
+
+//This function handles DELETE
+function deleteScheduleEntry(id) {
+    fetch(`${dataUrl}/${id}`, {
+        method: "DELETE"
+
+    })
+    .then(() =>{
+        alert("Entry deleted successfully!");
+        
+        //Clear the contents after deletion
+        const oneEntryContainer = document.querySelector("#deletediv");
+        oneEntryContainer.innerHTML = '';
+    })
+    .catch(error =>console.error("Error deleting entry", error));
+}
