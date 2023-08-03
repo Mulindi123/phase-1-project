@@ -40,9 +40,9 @@ nav {
 
   .menu-list li {
     display: inline-block;
-    margin: 0 20px;
+    margin: 0 10px;
     color: black;
-    font-size: 20px;
+    font-size: 18px;
     font-style: normal;
   }
 
@@ -63,23 +63,25 @@ main img {
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
-#content1{
+/**#content1{
 background: #6fffd2;
 grid-area: content1;
 border-radius: var(--main-radius);
 padding-top: var(--main-padding);
-}
-#content2{
-    background: #64ffda;
+}*/
+#searchdiv{
+    background: pink;
     grid-area: content2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin-top: 5px;
 }
-#content3{
-    background: #73ffba;
+#deletediv{
+    background: pink;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    margin-top: 5px;
 }
 #footer{
     background:violet;
@@ -148,11 +150,14 @@ button{
 }
 /* Add this to your CSS or main.css */
 #requestForm {
-    margin-top: 20px;
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    margin-top: 5px;
     border: 1px solid #ddd;
     padding: 20px;
     background-color: pink;
-    border-radius: 5px;
+
 }
 
 #garbageRequestForm label {
