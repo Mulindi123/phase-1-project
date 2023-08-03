@@ -162,6 +162,10 @@ function searchEntry(id) {
         <p>Afternoon: ${data.afterNoon}</p>`;
         oneEntryContainer.innerHTML = ""; // Clear previous content
 
+        // Clear input field
+    const searchIdInput = document.getElementById("searchId");
+    searchIdInput.value = ""; // Clear the search input field
+
         // Create the delete button
         const deleteButton = document.createElement("button");
         deleteButton.innerHTML= "Delete";
