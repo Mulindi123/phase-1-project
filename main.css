@@ -6,8 +6,8 @@
 
 .container {
     display: grid;
-    height: 220vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 200px;;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
     grid-template-rows: 0.2fr 1.5fr 1.2fr 0.5fr;
     grid-template-areas: 
     "nav nav nav nav"
@@ -17,17 +17,17 @@
     grid-gap: 0.2rem;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800px;
-    font-size: 15px;
+    font-size: 12px;
     color: #004d40;
     text-align: center;
     
 }
 nav {
-    background:gray;
+    background:violet;
     grid-area: nav;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    color: wheat;
+    
     
 }
   .menu {
@@ -41,7 +41,9 @@ nav {
   .menu-list li {
     display: inline-block;
     margin: 0 20px;
-    color: #18ffff;
+    color: black;
+    font-size: 20px;
+    font-style: normal;
   }
 
 main {
@@ -55,10 +57,9 @@ main img {
     max-width: 100%;
 }
 #sidebar {
-    background: grey;
+    background: violet;
     grid-area: sidebar;
-    font-weight: 1000px;
-    color: white;
+    color: black;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
@@ -81,7 +82,7 @@ padding-top: var(--main-padding);
     padding-top: var(--main-padding);
 }
 #footer{
-    background:gray;
+    background:violet;
     grid-area: footer;
 }
 #contacts {
@@ -92,6 +93,7 @@ padding-top: var(--main-padding);
 }
 #contacts li {
     display: inline;
+    color: black;
 }
 
 @media only screen and (max-width:550px) {
