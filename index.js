@@ -138,7 +138,12 @@ garbageRequestForm.addEventListener("submit", function(event){
             }
         })
         .catch(error => console.log(error));
-})
+
+         // Reset input fields after submission
+    document.getElementById("area").value = "";
+    document.getElementById("day").value = "";
+    document.getElementById("timeSlot").value = "";
+});
 
 // Here I want to implement search and delete
 // Function to search for an entry by Id
