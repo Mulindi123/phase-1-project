@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 
 let dataUrl ="http://localhost:3000/Schedule"
 const sideBar = document.querySelector("#sidebar");
@@ -181,3 +182,4 @@ function deleteScheduleEntry(id) {
     })
     .catch(error =>console.error("Error deleting entry", error));
 }
+});
