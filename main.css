@@ -126,8 +126,9 @@ padding-top: var(--main-padding);
 }
 button{
     margin: 20px;
-    padding: 5;
-    background-color: transparent;
+    padding: 5px;
+    background-color:black;
+    color: white;
     border: 1px solid black;
     border-radius: 4px;
     cursor: pointer;
