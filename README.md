@@ -8,7 +8,7 @@ Project problem statement
 There is lack of proper waste management in my area. The streets are often littered and heaps of uncollected garbage can be seen from time to time. This is a big health hazard to the people in my community. There are no proper garbage collection guidelines and the community members are inadequately educated on proper waste disposal and recycling.
 
 Solution
-I offer waste disposal services as well as educate on proper waste management.
+I offer waste disposal services as well as educate the locals on proper waste management.
 
 Project set up.
 Follow these steps to set up this project.
@@ -34,7 +34,7 @@ The key deliverables are
     1. Display the garbage collection schedule 
     2. Make a special request for garbage collection. This should persist to the server
     3. View and interact with the resources on the resource section
-    4. Search for a specific schedules
+    4. Search for a specific schedule
     5. Delete a displayed schedule
 
 Credit
