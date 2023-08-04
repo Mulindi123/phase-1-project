@@ -151,7 +151,19 @@ function searchEntry(id) {
 
     const oneEntryContainer = document.getElementById("deletediv")
     fetch(`${dataUrl}/${id}`)
-    .then(res =>res.json())
+    .then(res =>{
+        if (!res.ok) {
+            if (res.status === 404) {
+                alert("Entry not found");
+                oneEntryContainer.innerHTML = "";
+                const searchIdInput = document.getElementById("searchId");
+                searchIdInput.value = ""; // Clear the search input field
+
+            }
+            throw new Error("Error fetching data");
+        }
+        return res.json();
+    })
     .then(data =>{
         const entryContainer =document.createElement("div")
         entryContainer.innerHTML = `
@@ -178,6 +190,9 @@ function searchEntry(id) {
         oneEntryContainer.appendChild(entryContainer);
     })
     .catch(error => console.log(error));
+
+
+    
 }
 
 let searchButton =document.getElementById("searchButton")
