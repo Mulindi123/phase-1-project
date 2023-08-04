@@ -185,7 +185,7 @@ function searchEntry(id) {
         
         //Add event listener to the delete button,
         //calling the deleteSheduleEntry function below
-        deleteButton.addEventListener("click",  deleteScheduleEntry);
+        deleteButton.addEventListener("click", () => deleteScheduleEntry(id));
         entryContainer.appendChild(deleteButton);
         oneEntryContainer.appendChild(entryContainer);
     })
@@ -219,4 +219,5 @@ function deleteScheduleEntry(id) {
     })
     .catch(error =>console.error("Error deleting entry", error));
 }
+
 });
