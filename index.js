@@ -109,7 +109,7 @@ function updateSchedule (day,timeSlot, area) {
             body: JSON.stringify(fridaySchedule)
          })
          .then(()=>{
-            alert("Your garbage collection has been submitted for Friday")
+            alert(`Your garbage collection request has been submitted for Friday ${timeSlot}!`)
          })
          .catch(error => console.log(error));
     })
