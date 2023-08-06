@@ -71,11 +71,29 @@
             <button type="submit">Submit Request</button>
         </form>
        </div>
+       <div id="createAndSearch">
+        <div id="createForm">
+            <h6>Create New Schedule Entry</h6>
+            <form id="createForm">
+                <label for="createArea">Area:</label>
+                <input type="text" id="createArea" required>
+                <label for="createDay">Day:</label>
+                <input type="text" id="createDay" placeholder="Enter Week_end" required>
+                <label for="createMorning">Morning:</label>
+                <input type="text" id="createMorning" required>
+                <label for="createMidMorning">Mid-Morning:</label>
+                <input type="text" id="createMidMorning" required>
+                <label for="createAfternoon">Afternoon:</label>
+                <input type="text" id="createAfterNoon" required>
+                <button type="submit">Create</button>
+            </form>
+            </div>
        <div id="searchdiv">
         <h6>Enter Id to search for your area Schedule</h6>
         <label for="searchId">Search</label>
         <input type="text" id="searchId" placeholder="Enter ID to search">
         <button id="searchButton">Search</button>
+       </div>
        </div>
        <div id="deletediv">
         <!--Display searched data here for eventual-->

@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-let dataUrl ="https://waste-mngt.onrender.com/Schedule"
+let dataUrl ="http://localhost:3000/Schedule"
 const sideBar = document.querySelector("#sidebar");
 let isScheduleVisible = false; 
 const scheduleContainer = document.createElement("div")
@@ -49,6 +49,51 @@ viewScheduleButton.textContent = "View Schedule"
 viewScheduleButton.addEventListener("click", viewScheduleOnClick)
 sideBar.appendChild(viewScheduleButton)
 sideBar.appendChild(scheduleContainer)
+
+const createForm = document.querySelector("#createForm");
+
+createForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const createArea = document.getElementById("createArea").value;
+    const createDay = document.getElementById("createDay").value;
+    const createMorning = document.getElementById("createMorning").value;
+    const createMidMorning = document.getElementById("createMidMorning").value;
+    const createAfterNoon = document.getElementById("createAfterNoon").value;
+
+    const newEntry = {
+        day: createDay,
+        area: createArea,
+        morning: createMorning,
+        midMorning: createMidMorning,
+        afterNoon: createAfterNoon
+    };
+
+    fetch(dataUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newEntry)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle successful creation, e.g., display a success message
+        console.log("New entry created:", data);
+    })
+    .catch(error => {
+        // Handle error, e.g., display an error message
+        console.error("Error creating entry:", error);
+    });
+
+    // Clear input fields after submission
+    document.getElementById("createArea").value = "";
+    document.getElementById("createDay").value = "";
+    document.getElementById("createMorning").value = "";
+    document.getElementById("createMidMorning").value = "";
+    document.getElementById("createAfterNoon").value = "";
+});
+
 
 
 const showResourcesButton = document.getElementById("showResources");
