@@ -78,12 +78,12 @@ createForm.addEventListener("submit", function(event) {
     })
     .then(response => response.json())
     .then(data => {
-        // Handle successful creation, e.g., display a success message
-        console.log("New entry created:", data);
+        //Alert for successful creation
+        alert("New entry created successfully!");
     })
     .catch(error => {
-        // Handle error, e.g., display an error message
-        console.error("Error creating entry:", error);
+        // Alert in case of an eror
+       alert("Error creating entry:");
     });
 
     // Clear input fields after submission

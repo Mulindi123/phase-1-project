@@ -39,6 +39,22 @@
       "midMorning": "free",
       "afterNoon": "free",
       "id": 5
+    },
+    {
+      "day": "Saturday",
+      "area": "Kangundo",
+      "morning": "Muranga",
+      "midMorning": "Mathioya",
+      "afterNoon": "Imenti",
+      "id": 6
+    },
+    {
+      "day": "Saturday",
+      "area": "Kangundo",
+      "morning": "Muranga",
+      "midMorning": "Mathioya",
+      "afterNoon": "Imenti",
+      "id": 7
     }
   ]
 }
