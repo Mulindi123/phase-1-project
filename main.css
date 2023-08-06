@@ -171,7 +171,16 @@ button{
     border: 1px solid #ddd;
     padding: 20px;
     background-color: pink;
+    
 
+}
+#garbageRequestForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: pink ;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #garbageRequestForm label {
@@ -221,29 +230,27 @@ button{
 
         #searchButton:hover,
         #deleteButton:hover {
-            background-color: purple;
+            background-color: plum;
         }
 
-        /* styles.css */
-
-/* Style for form container */
+   
 #createForm {
     margin-top: 20px;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: pink ;
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for form labels */
+
 #createForm label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-/* Style for form input fields */
+
 #createForm input {
     width: 100%;
     padding: 8px;
@@ -254,19 +261,16 @@ button{
 
 /* Style for form submit button */
 #createForm button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #3498db;
-    color: #fff;
+    background-color: black;
+    color: white;
     border: none;
-    border-radius: 3px;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
 #createForm button:hover {
-    background-color: #2980b9;
+    background-color: plum;
 }
 
 
