@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-let dataUrl ="https://waste-management-pesn.onrender.com/Schedule"
+let dataUrl ="https://waste-mngt.onrender.com/Schedule"
 const sideBar = document.querySelector("#sidebar");
 let isScheduleVisible = false; 
 const scheduleContainer = document.createElement("div")

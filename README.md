@@ -1,5 +1,4 @@
 # phase-1-project
-https://waste-management-pesn.onrender.com/Schedule
 
 
 Project Name: Uthiru Waste Management Platform
@@ -22,7 +21,7 @@ Technologies used
     • Html for the basic web structure
     • CSS for styling the user interface
     • JavaScript for DOM manipulation, event handling and communicating with the server.
-    • JSON DB Server to serve as the local API for storing schedule details.
+    •https://waste-mngt.onrender.com/Schedule to serve as the API for storing schedule details.
     
 Usage
     • When a user first visits the page, they see a waste collection schedule for their area. 
