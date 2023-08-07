@@ -84,14 +84,14 @@ padding-top: var(--main-padding);
     grid-area: content2;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    margin-top: 5px;
+
 }
 #deletediv{
     background: pink;
     grid-area: content3;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
-    margin-top: 5px;
+   
 }
 #footer{
     background:violet;
